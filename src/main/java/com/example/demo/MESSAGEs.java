@@ -12,7 +12,7 @@ import java.util.Date;
 public class MESSAGEs {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private string MESSAGE;
+    private string MESSAGEs;
 
     @NotNull
     @Size(min = 10)

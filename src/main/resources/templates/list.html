@@ -5,9 +5,24 @@
     <title>Title</title>
 </head>
 <body>
-<a href="/add">Add message</a><br />
-<div th:each="message : ${message}">
-    <h4 th:inline="text">[[${todo.message}]] @ [[${todo.id}]]</h4>
-    <p th:text="${todo.content}"></p>
+<a href="/add">Add MESSAGE</a><br />
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Content</th>
+        <th>Posteddate</th>
+        <th>Sentby</th>
+    </tr>
+    <td th:each="message : ${messages}">
+        <td th:text="${message.id}"</td>
+        <td th:text="${message.content}"</td>
+        <td th:text="${message.posteddate}"></td>
+        <td th:text="${message.sentby}"></td>
+    <td>
+<a th:href="@/update/{id}(id=${message.id})}">Update</a> -
+        <a th:href="@/detail/{id}(id=${message.id})}">Details</a> -
+        <a th:href="@/delete/{id}(id=${message.id})}">Delete</a>
+    </td></tr>
+</table>
 </body>
 </html>

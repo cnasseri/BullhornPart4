@@ -12,7 +12,7 @@ import java.util.Date;
 public class MESSAGEs {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private string MESSAGEs;
+    private String MESSAGEs;
 
     @NotNull
     @Size(min = 10)
@@ -30,12 +30,12 @@ public class MESSAGEs {
     @Size(min = 10)
     private String sentby;
 
-    public string getMESSAGE() {
-        return MESSAGE;
+    public String getMESSAGEs() {
+        return MESSAGEs;
     }
 
-    public void setMESSAGE(string MESSAGE) {
-        this.MESSAGE = MESSAGE;
+    public void setMESSAGEs(String MESSAGEs) {
+        this.MESSAGEs = MESSAGEs;
     }
 
     public long getId() {
